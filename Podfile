@@ -6,7 +6,6 @@ use_frameworks!
 target 'OLX' do
     
     pod 'AFNetworking', '~> 3.0'
-    pod 'MTLJSONAdapterWithoutNil'
     
 end
 

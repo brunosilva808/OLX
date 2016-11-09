@@ -9,7 +9,6 @@
 #import "AdsServerManager.h"
 #import "Ad.h"
 #import "PersistentManager.h"
-#import "MTLJSONAdapter.h"
 
 @implementation AdsServerManager
 {
@@ -44,20 +43,22 @@
         
     return [self.manager GET:@"i2/ads/?json=1&search[category_id]=25" parameters:nil progress:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
         
-        NSError *error = nil;
-        NSArray *adsArray = [[MTLJSONAdapter modelsOfClass:Ad.class
-                                            fromJSONArray:[JSON valueForKeyPath:@"ads"]
-                                                    error:&error] mutableCopy];
+        NSArray *postsFromResponse = [JSON valueForKeyPath:@"ads"];
+        NSMutableArray *mutablePosts = [NSMutableArray arrayWithCapacity:[postsFromResponse count]];
+        for (NSDictionary *attributes in postsFromResponse) {
+            Ad *ad = [[Ad alloc] initWithAttributes:attributes];
+            [mutablePosts addObject:ad];
+        }
         
-        [persistentManager saveAds:[adsArray mutableCopy]];
+        [persistentManager saveAds:mutablePosts];
         
         if (block) {
-            block([NSArray arrayWithArray:adsArray], error);
+            block([NSArray arrayWithArray:mutablePosts], nil);
         }
         
     } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
         if (block) {
-            block([persistentManager loadAds], error);
+            block([NSArray arrayWithArray:[persistentManager loadAds]], error);
         }
     }];
 

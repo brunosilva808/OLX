@@ -7,19 +7,11 @@
 //
 
 #import "Ad.h"
+#import "Map.h"
 
 @implementation Ad
-
-#pragma mark - Mantle Mapping
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return @{ @"guid"			: @"id",
-              @"url"            : @"url",
-              @"previewUrl"		: @"preview",
-              @"title"			: @"title",
-              @"created"        : @"created",
-              @"adDescription"	: @"description"
-              };
+{
+    Map *map;
 }
 
 #pragma mark - Archiving
@@ -61,7 +53,9 @@
     self.url = [NSURL URLWithString:[attributes valueForKeyPath:@"url"]];
     self.previewUrl = [NSURL URLWithString:[attributes valueForKeyPath:@"preview"]];
     self.title = [attributes valueForKeyPath:@"title"];
+    self.created = [attributes valueForKeyPath:@"created"];
     self.adDescription = [attributes valueForKeyPath:@"description"];
+    map = [[Map alloc] initWithAttributes:attributes];
     
     return self;
 }

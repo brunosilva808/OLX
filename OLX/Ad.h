@@ -6,10 +6,9 @@
 //  Copyright © 2016 Tradiio. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 
-#import <Mantle/Mantle.h>
-
-@interface Ad : MTLModel <MTLJSONSerializing, NSCoding>
+@interface Ad : NSObject <NSCoding>
 
 #pragma mark - Properties
 

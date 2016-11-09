@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class MKMapView;
+@class MKMapView, Ad;
 
 @interface MapViewController : UIViewController
+
+#pragma mark - Properties
+
+@property (strong, nonatomic) Ad *ad;
+
+#pragma mark - IBOutlet
 
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 

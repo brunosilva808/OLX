@@ -14,21 +14,13 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Mantle (2.0):
-    - Mantle/extobjc (= 2.0)
-  - Mantle/extobjc (2.0)
-  - MTLJSONAdapterWithoutNil (1.0):
-    - Mantle (= 2.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
-  - MTLJSONAdapterWithoutNil
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Mantle: d7c75b6fb789b20f7ae30cd0d09435fe545896ff
-  MTLJSONAdapterWithoutNil: f17d2a089628ab4da5158bf11f13a9e4bc5f4709
 
-PODFILE CHECKSUM: 195bc47a663a2a32e1351c1756976780ffe7b0a2
+PODFILE CHECKSUM: 1acd924d6e352b579720f5d2fe329a44c9dd7ce9
 
 COCOAPODS: 1.1.1

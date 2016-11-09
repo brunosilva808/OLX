@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7E7A57921DD3994800214B21 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A57911DD3994800214B21 /* MapViewController.m */; };
 		7E7A57941DD39B3400214B21 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7A57931DD39B3400214B21 /* MapKit.framework */; };
+		7E7A57971DD39CEA00214B21 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A57961DD39CEA00214B21 /* Map.m */; };
 		7EC833791DD1E6AE00B5DB59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC833781DD1E6AE00B5DB59 /* main.m */; };
 		7EC8337C1DD1E6AE00B5DB59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC8337B1DD1E6AE00B5DB59 /* AppDelegate.m */; };
 		7EC8337F1DD1E6AE00B5DB59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC8337E1DD1E6AE00B5DB59 /* ViewController.m */; };
@@ -31,6 +32,8 @@
 		7E7A57901DD3994800214B21 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		7E7A57911DD3994800214B21 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		7E7A57931DD39B3400214B21 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7E7A57951DD39CEA00214B21 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		7E7A57961DD39CEA00214B21 /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
 		7EC833741DD1E6AE00B5DB59 /* OLX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OLX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC833781DD1E6AE00B5DB59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EC8337A1DD1E6AE00B5DB59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 			children = (
 				7EC833971DD1ED2D00B5DB59 /* Ad.h */,
 				7EC833981DD1ED2D00B5DB59 /* Ad.m */,
+				7E7A57951DD39CEA00214B21 /* Map.h */,
+				7E7A57961DD39CEA00214B21 /* Map.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				7EC833D71DD22D2B00B5DB59 /* ModelController.m in Sources */,
 				7EC833791DD1E6AE00B5DB59 /* main.m in Sources */,
 				7EC833911DD1E99900B5DB59 /* AdsServerManager.m in Sources */,
+				7E7A57971DD39CEA00214B21 /* Map.m in Sources */,
 				7E7A57921DD3994800214B21 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +365,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -407,6 +414,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

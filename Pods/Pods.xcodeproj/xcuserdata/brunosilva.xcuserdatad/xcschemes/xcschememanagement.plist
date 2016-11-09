@@ -9,16 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MTLJSONAdapterWithoutNil.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Mantle.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-OLX.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>53DF4D72AE469C2D6DE508782E8DAB41</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B0D2BC4789FBEF0D9C6C1391CEEFF838</key>
+		<key>CD30CB5A074661F0167A036ACE41C704</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F4C754E8C2F555BFD285E52BA04F39F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
