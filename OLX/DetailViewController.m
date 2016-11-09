@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "Ad.h"
 #import "MapViewController.h"
+#import "AdsServerManager.h"
 
 @interface DetailViewController ()
 
@@ -30,10 +31,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+
+    [[AdsServerManager sharedManager] setFlag:NO];
+}
+
 #pragma mark - Setup
 
 - (void)setup {
-    self.titleLabel.text = self.ad.title;
+
+    if ([[AdsServerManager sharedManager] flag] == YES) {
+        [self.scrollView setContentInset:UIEdgeInsetsMake(60, 0, 0, 0)];
+    }
+    
+    self.titleLabel.text = [NSString stringWithFormat:@"%@ - %@", self.ad.title, self.ad.price];
     self.descriptionLabel.text = self.ad.adDescription;
 }
 

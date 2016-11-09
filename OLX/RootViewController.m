@@ -28,7 +28,7 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-    DetailViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:storyboard];
+    DetailViewController *startingViewController = [self.modelController viewControllerAtIndex:self.adIndex storyboard:storyboard];
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     

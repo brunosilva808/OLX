@@ -8,6 +8,7 @@
 
 #import "ModelController.h"
 #import "DetailViewController.h"
+#import "AdsServerManager.h"
 
 /*
  A controller object that manages a simple model -- a collection of month names.
@@ -29,9 +30,6 @@
 - (instancetype)initWithAds:(NSMutableArray *)adsArray {
     self = [super init];
     if (self) {
-        // Create the data model.
-//        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-//        _adsArray = [[dateFormatter monthSymbols] copy];
         self.adsArray = adsArray;
     }
     return self;
@@ -66,6 +64,8 @@
         return nil;
     }
     
+    [[AdsServerManager sharedManager] setFlag:YES];
+    
     index--;
     return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
 }
@@ -81,6 +81,9 @@
     if (index == [self.adsArray count]) {
         return nil;
     }
+    
+    [[AdsServerManager sharedManager] setFlag:YES];
+    
     return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
 }
 

@@ -155,6 +155,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="tnM-eb-MCa" id="p6n-K2-8TM"/>
+                        <outlet property="scrollView" destination="wCX-hR-Occ" id="m2c-yj-baP"/>
                         <outlet property="titleLabel" destination="Kv4-qz-Wai" id="cZF-Zn-9mS"/>
                     </connections>
                 </viewController>

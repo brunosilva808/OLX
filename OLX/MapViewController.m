@@ -8,11 +8,8 @@
 
 #import "MapViewController.h"
 #import "Ad.h"
-#import "CustomAnnotation.h"
 #import "Map.h"
 #import <MapKit/MapKit.h>
-
-#define METERS_PER_MILE 1609.344
 
 @interface MapViewController ()
 {

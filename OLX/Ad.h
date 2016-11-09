@@ -21,6 +21,7 @@
 @property (nonatomic, copy) NSString *created;
 @property (nonatomic, copy) NSString *adDescription;
 @property (nonatomic, strong) Map *map;
+@property (nonatomic, copy) NSString *price;
 
 #pragma mark - Methods
 

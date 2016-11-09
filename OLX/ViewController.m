@@ -90,8 +90,8 @@
 
     RootViewController *rootViewController = [[RootViewController alloc] init];
     rootViewController.adsArray = self.adsArray;
+    rootViewController.adIndex = indexPath.row;
     [self.navigationController pushViewController:rootViewController animated:YES];
-//    [self presentViewController:rootViewController animated:NO completion:nil];
 }
 
 

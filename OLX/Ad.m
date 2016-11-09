@@ -21,6 +21,7 @@
     [aCoder encodeObject:self.title forKey:@"title"];
     [aCoder encodeObject:self.created forKey:@"created"];
     [aCoder encodeObject:self.adDescription forKey:@"adDescription"];
+    [aCoder encodeObject:self.price forKey:@"price"];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -34,6 +35,7 @@
         _title = [aDecoder decodeObjectForKey:@"title"];
         _created = [aDecoder decodeObjectForKey:@"created"];
         _adDescription = [aDecoder decodeObjectForKey:@"adDescription"];
+        _price = [aDecoder decodeObjectForKey:@"price"];
     }
     return self;
 }
@@ -53,6 +55,7 @@
     self.created = [attributes valueForKeyPath:@"created"];
     self.adDescription = [attributes valueForKeyPath:@"description"];
     self.map = [[Map alloc] initWithAttributes:attributes];
+    self.price = [attributes valueForKeyPath:@"list_label"] ;
     
     return self;
 }

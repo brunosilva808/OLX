@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E2526491DD3DE3B0019B31B /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2526481DD3DE3B0019B31B /* CustomAnnotation.m */; };
 		7E7A57921DD3994800214B21 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A57911DD3994800214B21 /* MapViewController.m */; };
 		7E7A57941DD39B3400214B21 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7A57931DD39B3400214B21 /* MapKit.framework */; };
 		7E7A57971DD39CEA00214B21 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A57961DD39CEA00214B21 /* Map.m */; };
@@ -30,8 +29,6 @@
 
 /* Begin PBXFileReference section */
 		68086D7CAD817F39512203E3 /* Pods-OLX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OLX.release.xcconfig"; path = "Pods/Target Support Files/Pods-OLX/Pods-OLX.release.xcconfig"; sourceTree = "<group>"; };
-		7E2526471DD3DE3B0019B31B /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
-		7E2526481DD3DE3B0019B31B /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
 		7E7A57901DD3994800214B21 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		7E7A57911DD3994800214B21 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		7E7A57931DD39B3400214B21 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -120,11 +117,11 @@
 		7EC833761DD1E6AE00B5DB59 /* OLX */ = {
 			isa = PBXGroup;
 			children = (
+				7EC8337B1DD1E6AE00B5DB59 /* AppDelegate.m */,
 				7EC833961DD1ED1F00B5DB59 /* Model */,
 				7EC8338E1DD1E95F00B5DB59 /* Helpers */,
 				7EC8337A1DD1E6AE00B5DB59 /* AppDelegate.h */,
 				7EC8339D1DD21C2700B5DB59 /* Cells */,
-				7EC8337B1DD1E6AE00B5DB59 /* AppDelegate.m */,
 				7EC833A81DD22BF300B5DB59 /* Controllers */,
 				7EC833801DD1E6AE00B5DB59 /* Main.storyboard */,
 				7EC833831DD1E6AE00B5DB59 /* Assets.xcassets */,
@@ -161,8 +158,6 @@
 				7EC833981DD1ED2D00B5DB59 /* Ad.m */,
 				7E7A57951DD39CEA00214B21 /* Map.h */,
 				7E7A57961DD39CEA00214B21 /* Map.m */,
-				7E2526471DD3DE3B0019B31B /* CustomAnnotation.h */,
-				7E2526481DD3DE3B0019B31B /* CustomAnnotation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -329,7 +324,6 @@
 				7EC833911DD1E99900B5DB59 /* AdsServerManager.m in Sources */,
 				7E7A57971DD39CEA00214B21 /* Map.m in Sources */,
 				7E7A57921DD3994800214B21 /* MapViewController.m in Sources */,
-				7E2526491DD3DE3B0019B31B /* CustomAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

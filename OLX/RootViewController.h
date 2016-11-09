@@ -13,6 +13,7 @@
 #pragma mark - Properties
 
 @property (nonatomic, strong) NSMutableArray *adsArray;
+@property (nonatomic, assign) NSInteger adIndex;
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
 @end

@@ -13,6 +13,7 @@
 
 #pragma mark - Properties
 
+@property (assign, nonatomic) BOOL flag;
 + (instancetype)sharedManager;
 @property (strong, nonatomic) AFHTTPSessionManager *manager;
 
