@@ -18,6 +18,6 @@
 
 #pragma mark - IBOutlet
 
-@property (weak, nonatomic) IBOutlet MKMapView *map;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end

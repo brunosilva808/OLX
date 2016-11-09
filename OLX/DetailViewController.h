@@ -21,8 +21,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
-#pragma mark - IBAction
-
-- (IBAction)mapButtonTapped:(id)sender;
-
 @end

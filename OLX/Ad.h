@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class Map;
+
 @interface Ad : NSObject <NSCoding>
 
 #pragma mark - Properties
@@ -17,9 +19,8 @@
 @property (nonatomic, copy) NSURL *previewUrl;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *created;
-//@property (nonatomic, assign) NSInteger age;
 @property (nonatomic, copy) NSString *adDescription;
-//@property (nonatomic, assign) BOOL hilighted;
+@property (nonatomic, strong) Map *map;
 
 #pragma mark - Methods
 

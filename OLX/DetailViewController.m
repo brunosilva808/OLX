@@ -37,21 +37,13 @@
     self.descriptionLabel.text = self.ad.adDescription;
 }
 
-#pragma mark - Setup
-
-- (IBAction)mapButtonTapped:(id)sender {
-    MapViewController *mapViewController = [[MapViewController alloc] init];
-    [self.navigationController pushViewController:mapViewController animated:YES];
-}
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    MapViewController *mapViewController = [segue destinationViewController];
+    mapViewController.ad = self.ad;
 }
-*/
+
 
 @end

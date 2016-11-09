@@ -10,9 +10,6 @@
 #import "Map.h"
 
 @implementation Ad
-{
-    Map *map;
-}
 
 #pragma mark - Archiving
 
@@ -55,7 +52,7 @@
     self.title = [attributes valueForKeyPath:@"title"];
     self.created = [attributes valueForKeyPath:@"created"];
     self.adDescription = [attributes valueForKeyPath:@"description"];
-    map = [[Map alloc] initWithAttributes:attributes];
+    self.map = [[Map alloc] initWithAttributes:attributes];
     
     return self;
 }

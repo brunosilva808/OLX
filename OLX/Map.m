@@ -10,21 +10,6 @@
 
 @implementation Map
 
-#pragma mark - Mantle Mapping
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return @{ @"zoom"		: @"map_zoom",
-              @"latitude"   : @"map_lat",
-              @"longitude"	: @"map_lon",
-              @"radius"		: @"map_radius",
-              @"detail"     : @"map_show_detailed",
-              @"location"	: @"map_location",
-              @"cityId"     : @"city_id",
-              @"regionId"   : @"region_id",
-              @"cityLabel"  : @"city_label"
-              };
-}
-
 #pragma mark - Archiving
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
@@ -53,7 +38,8 @@
         _location = [aDecoder decodeObjectForKey:@"location"];
         _cityId = [aDecoder decodeObjectForKey:@"cityId"];
         _regionId = [aDecoder decodeObjectForKey:@"regionId"];
-        _cityId = [aDecoder decodeObjectForKey:@"cityLabel"];
+        _cityId = [aDecoder decodeObjectForKey:@"cityId"];
+        _cityLabel = [aDecoder decodeObjectForKey:@"cityLabel"];
     }
     return self;
 }
@@ -74,7 +60,7 @@
     self.location = [attributes valueForKeyPath:@"map_location"];
     self.cityId = [attributes valueForKeyPath:@"city_id"];
     self.regionId = [attributes valueForKeyPath:@"region_id"];
-    self.cityId = [attributes valueForKeyPath:@"city_label"];
+    self.cityLabel = [attributes valueForKeyPath:@"city_label"];
     
     return self;
 }
