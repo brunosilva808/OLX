@@ -1,47 +1,28 @@
 //
-//  DetailViewController.m
+//  MapViewController.m
 //  OLX
 //
-//  Created by Bruno Silva on 08/11/2016.
+//  Created by Bruno Silva on 09/11/2016.
 //  Copyright © 2016 Tradiio. All rights reserved.
 //
 
-#import "DetailViewController.h"
-#import "Ad.h"
 #import "MapViewController.h"
+#import <MapKit/MapKit.h>
 
-@interface DetailViewController ()
+@interface MapViewController ()
 
 @end
 
-@implementation DetailViewController
-
-#pragma mark - Life Cycle
+@implementation MapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self setup];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Setup
-
-- (void)setup {
-    self.titleLabel.text = self.ad.title;
-    self.descriptionLabel.text = self.ad.adDescription;
-}
-
-#pragma mark - Setup
-
-- (IBAction)mapButtonTapped:(id)sender {
-    MapViewController *mapViewController = [[MapViewController alloc] init];
-    [self.navigationController pushViewController:mapViewController animated:YES];
 }
 
 /*

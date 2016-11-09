@@ -43,7 +43,6 @@
 #pragma mark - Setup
 
 - (void)setupTable {
-    self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
     [self.tableView registerNib:[UINib nibWithNibName:@"AdsTableViewCell" bundle:nil]
          forCellReuseIdentifier:NSStringFromClass([AdsTableViewCell class])];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -57,14 +56,9 @@
     WeakDeclaration(self, weakSelf);
     
     [[AdsServerManager sharedManager] adsWithBlock:^(NSArray *posts, NSError *error) {
-        if (error) {
-            //            NSAlert *alert = [[NSAlert alloc] init];
-            //            alert.messageText = NSLocalizedString(@"Error", nil);
-            //            alert.informativeText = error.localizedDescription;
-            //            [alert addButtonWithTitle:NSLocalizedString(@"OK", nil)];
-            //            [alert runModal];
-            NSLog(@"%@", error);
-        }
+//        if (error) {
+//            weakSelf.adsArray = [posts mutableCopy];
+//        }
         
         weakSelf.adsArray = [posts mutableCopy];
         [weakSelf.tableView reloadData];
@@ -96,7 +90,8 @@
 
     RootViewController *rootViewController = [[RootViewController alloc] init];
     rootViewController.adsArray = self.adsArray;
-    [self presentViewController:rootViewController animated:NO completion:nil];
+    [self.navigationController pushViewController:rootViewController animated:YES];
+//    [self presentViewController:rootViewController animated:NO completion:nil];
 }
 
 

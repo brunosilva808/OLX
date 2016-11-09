@@ -41,6 +41,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Deq-Yp-A7q" secondAttribute="bottom" constant="29" id="BIY-Ck-CQQ"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hc8-yn-Arr" secondAttribute="bottom" constant="10" id="Cum-VM-2Dh"/>
                     <constraint firstItem="Deq-Yp-A7q" firstAttribute="leading" secondItem="hc8-yn-Arr" secondAttribute="trailing" constant="8" id="J4D-SC-6Rj"/>
                     <constraint firstAttribute="trailing" secondItem="Deq-Yp-A7q" secondAttribute="trailing" constant="16" id="LPr-sJ-IL5"/>
                     <constraint firstItem="AmG-LT-9dI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="SH4-4y-P4Z"/>

@@ -9,7 +9,7 @@
 
 #import <Mantle/Mantle.h>
 
-@interface Ad : MTLModel <MTLJSONSerializing>
+@interface Ad : MTLModel <MTLJSONSerializing, NSCoding>
 
 #pragma mark - Properties
 

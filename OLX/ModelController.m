@@ -45,7 +45,7 @@
 
     // Create a new view controller and pass suitable data.
     DetailViewController *DetailViewController = [storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
-    DetailViewController.dataObject = self.adsArray[index];
+    DetailViewController.ad = self.adsArray[index];
     return DetailViewController;
 }
 
@@ -53,7 +53,7 @@
 - (NSUInteger)indexOfViewController:(DetailViewController *)viewController {
     // Return the index of the given data view controller.
     // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
-    return [self.adsArray indexOfObject:viewController.dataObject];
+    return [self.adsArray indexOfObject:viewController.ad];
 }
 
 

@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ParseManager : NSObject
+@interface PersistentManager : NSObject
 
-#pragma mark - Properties
+#pragma mark - Methods
 
-+ (instancetype)sharedManager;
+- (void)saveAds:(NSMutableArray *)ads;
+- (NSMutableArray *)loadAds;
 
 @end

@@ -7,11 +7,14 @@
 //
 
 #import "AdsServerManager.h"
-#import "ParseManager.h"
 #import "Ad.h"
+#import "PersistentManager.h"
 #import "MTLJSONAdapter.h"
 
 @implementation AdsServerManager
+{
+    PersistentManager *persistentManager;
+}
 
 #pragma mark - Life Cycle
 
@@ -30,6 +33,7 @@
 - (id)init {
     if (self = [super init]) {
         self.manager = [[AFHTTPSessionManager manager] initWithBaseURL:[NSURL URLWithString:@"https://olx.pt/"]];
+        persistentManager = [[PersistentManager alloc] init];
     }
     return self;
 }
@@ -44,16 +48,8 @@
         NSArray *adsArray = [[MTLJSONAdapter modelsOfClass:Ad.class
                                             fromJSONArray:[JSON valueForKeyPath:@"ads"]
                                                     error:&error] mutableCopy];
-
-//        NSLog(@"%@", adsArray);
-//        
-//        NSArray *postsFromResponse = [JSON valueForKeyPath:@"ads"];
-//        NSMutableArray *mutablePosts = [NSMutableArray arrayWithCapacity:[postsFromResponse count]];
-//        
-//        for (NSDictionary *attributes in postsFromResponse) {
-//            Ads *ads = [[Ads alloc] initWithAttributes:attributes];
-//            [mutablePosts addObject:ads];
-//        }
+        
+        [persistentManager saveAds:[adsArray mutableCopy]];
         
         if (block) {
             block([NSArray arrayWithArray:adsArray], error);
@@ -61,7 +57,7 @@
         
     } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
         if (block) {
-            block([NSArray array], error);
+            block([persistentManager loadAds], error);
         }
     }];
 
