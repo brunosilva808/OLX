@@ -8,7 +8,7 @@
 
 #import "ModelController.h"
 #import "DetailViewController.h"
-#import "AdsServerManager.h"
+#import "LibraryAPI.h"
 
 /*
  A controller object that manages a simple model -- a collection of month names.
@@ -64,7 +64,7 @@
         return nil;
     }
     
-    [[AdsServerManager sharedManager] setFlag:YES];
+    [[LibraryAPI sharedManager] setFlag:YES];
     
     index--;
     return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
@@ -82,7 +82,7 @@
         return nil;
     }
     
-    [[AdsServerManager sharedManager] setFlag:YES];
+    [[LibraryAPI sharedManager] setFlag:YES];
     
     return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
 }

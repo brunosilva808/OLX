@@ -16,7 +16,7 @@
 		7EC833821DD1E6AE00B5DB59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC833801DD1E6AE00B5DB59 /* Main.storyboard */; };
 		7EC833841DD1E6AE00B5DB59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC833831DD1E6AE00B5DB59 /* Assets.xcassets */; };
 		7EC833871DD1E6AE00B5DB59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC833851DD1E6AE00B5DB59 /* LaunchScreen.storyboard */; };
-		7EC833911DD1E99900B5DB59 /* AdsServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC833901DD1E99900B5DB59 /* AdsServerManager.m */; };
+		7EC833911DD1E99900B5DB59 /* LibraryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC833901DD1E99900B5DB59 /* LibraryAPI.m */; };
 		7EC833991DD1ED2D00B5DB59 /* Ad.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC833981DD1ED2D00B5DB59 /* Ad.m */; };
 		7EC8339C1DD2171500B5DB59 /* PersistentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC8339B1DD2171500B5DB59 /* PersistentManager.m */; };
 		7EC833A11DD21C4E00B5DB59 /* AdsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC8339F1DD21C4E00B5DB59 /* AdsTableViewCell.m */; };
@@ -45,8 +45,8 @@
 		7EC833831DD1E6AE00B5DB59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EC833861DD1E6AE00B5DB59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EC833881DD1E6AE00B5DB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EC8338F1DD1E99900B5DB59 /* AdsServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsServerManager.h; sourceTree = "<group>"; };
-		7EC833901DD1E99900B5DB59 /* AdsServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsServerManager.m; sourceTree = "<group>"; };
+		7EC8338F1DD1E99900B5DB59 /* LibraryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryAPI.h; sourceTree = "<group>"; };
+		7EC833901DD1E99900B5DB59 /* LibraryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryAPI.m; sourceTree = "<group>"; };
 		7EC833971DD1ED2D00B5DB59 /* Ad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad.h; sourceTree = "<group>"; };
 		7EC833981DD1ED2D00B5DB59 /* Ad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad.m; sourceTree = "<group>"; };
 		7EC8339A1DD2171500B5DB59 /* PersistentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistentManager.h; sourceTree = "<group>"; };
@@ -143,8 +143,8 @@
 		7EC8338E1DD1E95F00B5DB59 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				7EC8338F1DD1E99900B5DB59 /* AdsServerManager.h */,
-				7EC833901DD1E99900B5DB59 /* AdsServerManager.m */,
+				7EC8338F1DD1E99900B5DB59 /* LibraryAPI.h */,
+				7EC833901DD1E99900B5DB59 /* LibraryAPI.m */,
 				7EC8339A1DD2171500B5DB59 /* PersistentManager.h */,
 				7EC8339B1DD2171500B5DB59 /* PersistentManager.m */,
 			);
@@ -321,7 +321,7 @@
 				7EC8339C1DD2171500B5DB59 /* PersistentManager.m in Sources */,
 				7EC833D71DD22D2B00B5DB59 /* ModelController.m in Sources */,
 				7EC833791DD1E6AE00B5DB59 /* main.m in Sources */,
-				7EC833911DD1E99900B5DB59 /* AdsServerManager.m in Sources */,
+				7EC833911DD1E99900B5DB59 /* LibraryAPI.m in Sources */,
 				7E7A57971DD39CEA00214B21 /* Map.m in Sources */,
 				7E7A57921DD3994800214B21 /* MapViewController.m in Sources */,
 			);

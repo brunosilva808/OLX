@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "RootViewController.h"
 
-#import "AdsServerManager.h"
+#import "LibraryAPI.h"
 #import "AFHTTPSessionManager.h"
 
 #import "AdsTableViewCell.h"
@@ -55,7 +55,7 @@
 - (void)requestAds {
     WeakDeclaration(self, weakSelf);
     
-    [[AdsServerManager sharedManager] adsWithBlock:^(NSArray *posts, NSError *error) {
+    [[LibraryAPI sharedManager] adsWithBlock:^(NSArray *posts, NSError *error) {
 //        if (error) {
 //            weakSelf.adsArray = [posts mutableCopy];
 //        }

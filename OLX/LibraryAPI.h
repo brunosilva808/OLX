@@ -1,5 +1,5 @@
 //
-//  AdsServerManager.h
+//  LibraryAPI.h
 //  OLX
 //
 //  Created by Bruno Silva on 08/11/2016.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AFHTTPSessionManager.h"
 
-@interface AdsServerManager : NSObject
+@interface LibraryAPI : NSObject
 
 #pragma mark - Properties
 

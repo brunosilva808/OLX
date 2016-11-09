@@ -9,7 +9,7 @@
 #import "DetailViewController.h"
 #import "Ad.h"
 #import "MapViewController.h"
-#import "AdsServerManager.h"
+#import "LibraryAPI.h"
 
 @interface DetailViewController ()
 
@@ -34,14 +34,14 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
 
-    [[AdsServerManager sharedManager] setFlag:NO];
+    [[LibraryAPI sharedManager] setFlag:NO];
 }
 
 #pragma mark - Setup
 
 - (void)setup {
 
-    if ([[AdsServerManager sharedManager] flag] == YES) {
+    if ([[LibraryAPI sharedManager] flag] == YES) {
         [self.scrollView setContentInset:UIEdgeInsetsMake(60, 0, 0, 0)];
     }
     

@@ -1,16 +1,16 @@
 //
-//  AdsServerManager.m
+//  LibraryAPI.m
 //  OLX
 //
 //  Created by Bruno Silva on 08/11/2016.
 //  Copyright © 2016 Tradiio. All rights reserved.
 //
 
-#import "AdsServerManager.h"
+#import "LibraryAPI.h"
 #import "Ad.h"
 #import "PersistentManager.h"
 
-@implementation AdsServerManager
+@implementation LibraryAPI
 {
     PersistentManager *persistentManager;
 }
@@ -19,7 +19,7 @@
 
 + (instancetype)sharedManager
 {
-    static AdsServerManager *sharedMyManager = nil;
+    static LibraryAPI *sharedMyManager = nil;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
